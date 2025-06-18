@@ -38,7 +38,7 @@ The main purpose of this project is to understand how MITM attacks work and how 
    - A custom Wireshark profile named `MITM Detection` is used.
    - The filter applied:
      ```wireshark
-     arp.dst.proto_ipv4 == <target_ip> && arp.src.hw_mac != <original_mac>
+     ((arp.src.proto_ipv4 == 192.168.254.146) && (arp.opcode == 2)) && !(arp.src.hw_mac == 2c:f0:5d:d4:fc:f9)
      ```
    - This filter helps detect ARP replies with mismatched MAC addresses.
 
@@ -64,10 +64,31 @@ The main purpose of this project is to understand how MITM attacks work and how 
 ---
 
 ### 🖼️ MITM Attack Detected
-> A captured example of an ARP reply with a spoofed MAC address.
+> This indicates that **two devices are claiming the same IP address** using different MAC addresses. This is a **classic sign of ARP spoofing**, which is the core technique used in a MITM attack. The attacker is impersonating a legitimate device on the network to intercept traffic between the target and the gateway.
 
 ![MITM Detected](./screenshots/mitm-detected.PNG)
 
 ---
+
+## 🔍 What This Project Demonstrates
+
+- How ARP poisoning is used in MITM attacks.
+- How to use Wireshark to analyze network traffic and detect anomalies.
+- How to create a reusable Wireshark profile with preloaded filters.
+- How to identify suspicious ARP replies and mismatched MAC-to-IP bindings.
+
+---
+
+## 📚 What I Learned
+
+- The internal workings of **Man-in-the-Middle attacks**, especially using ARP spoofing.
+- How to **simulate MITM attacks** safely using Kali Linux and Ettercap.
+- How to **use Wireshark profiles and display filters** for real-time network monitoring.
+- How to spot abnormal ARP behavior that indicates MITM activity.
+- The importance of proactive traffic analysis in **network defense**.
+
+---
+
+
 
 
