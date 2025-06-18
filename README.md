@@ -43,4 +43,31 @@ The main purpose of this project is to understand how MITM attacks work and how 
    - This filter helps detect ARP replies with mismatched MAC addresses.
 
 ---
+## 📁 File Structure
+
+```text
+├── screenshots/
+│ ├── filter-setup.png # Wireshark ARP filter setup screenshot
+│ └── mitm-detected.png # Traffic showing MITM attack detected
+├── README.md # Project documentation
+```
+
+---
+
+## 📸 Screenshots
+
+### 🖼️ Wireshark Filter Setup
+> Shows the custom filter used to detect ARP poisoning.
+
+![Wireshark Filter Setup](screenshots/filter-setup.png)
+
+---
+
+### 🖼️ MITM Attack Detected
+> A captured example of an ARP reply with a spoofed MAC address.
+
+![MITM Detected](screenshots/mitm-detected.png)
+
+---
+
 
