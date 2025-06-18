@@ -59,14 +59,14 @@ The main purpose of this project is to understand how MITM attacks work and how 
 ### 🖼️ Wireshark Filter Setup
 > Shows the custom filter used to detect ARP poisoning.
 
-![Wireshark Filter Setup](./screenshots/filter-setup.png)
+![Wireshark Filter Setup](./screenshots/filter-setup.PNG)
 
 ---
 
 ### 🖼️ MITM Attack Detected
 > A captured example of an ARP reply with a spoofed MAC address.
 
-![MITM Detected](./screenshots/mitm-detected.png)
+![MITM Detected](./screenshots/mitm-detected.PNG)
 
 ---
 
